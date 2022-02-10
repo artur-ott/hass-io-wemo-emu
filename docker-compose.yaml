@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+    wemoemu:
+        build: .
+        networks:
+            - wemo_emu
+        volumes:
+            - /var/wemo_emu/config.yaml:/config.yaml
+networks:
+  wemo_emu:
+    external: true
+    name: hue_hub

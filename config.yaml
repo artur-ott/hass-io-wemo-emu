@@ -1,0 +1,7 @@
+ip: '192.168.1.2'
+devices:
+  - {
+    name: '<device-name>',
+    port: <device-port>,
+    endpoint: 'http://<server-ip>/endpoint/<node-red-endpoint>'
+  }

@@ -5,7 +5,7 @@ services:
         networks:
             - wemo_emu
         volumes:
-            - /var/wemo_emu/config.yaml:/config.yaml
+            - <path-to-wemo>/config.yaml:/config.yaml
 networks:
   wemo_emu:
     external: true

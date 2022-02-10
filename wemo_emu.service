@@ -1,0 +1,15 @@
+[Unit]
+Description=Wemo Emu custom service
+After=docker.service
+Wants=docker.service
+
+[Service]
+Type=oneshot
+User=root
+RemainAfterExit=true
+WorkingDirectory=/var/wemo_emu
+ExecStart=<path-to-wemo-emu>/server.sh start
+ExecStop=<path-to-wemo-emu>/server.sh stop
+
+[Install]
+WantedBy=multi-user.target
